@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .seat_ {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 5px 5px 5px;
+            background-color: green;
+            /* text-align: center; */
+            padding: 25px 25px 0 25px;
+        }
+        
+        .seat_:hover {
+            background-color: red;
+        }
+        
+        .screen {
+            height: 20px;
+            width: 600px;
+            background-color: black;
+            align-self: center;
+            margin-left: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .m_btn {
+            margin: 10px;
+            font-size: 20px;
+            padding: 10px;
+            font-weight: bold;
+            background-color: violet;
+            border: 1px solid blue;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_div" style="width: 1000px; text-align: center ; margin-left: auto;margin-right: auto;border: 2px solid black;">
+        <div class="screen"> </div>
+        <!-- <div class="seat_ " onclick="style.backgroundColor='red';"> 1</div>
+        <div class=" seat_" onclick="style.backgroundColor='red';">2</div>
+        <div class=" seat_" onclick="style.backgroundColor='red';">3</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">4</div>
+        <div class=" seat_" onclick="style.backgroundColor='red';">5</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">6</div>
+        <div class=" seat_" onclick="style.backgroundColor='red';">7</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">8</div>
+        <div class=" seat_" onclick="style.backgroundColor='red';">9</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">10</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">11</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">12</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">13</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">14</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">15</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">16</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">17</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">18</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">19</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">20</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">21</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">22</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">23</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">24</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">25</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">26</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">27</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">28</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">29</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">30</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">31</div>
+        <div class="seat_ " onclick="style.backgroundColor='red';">32</div> -->
+
+    </div>
+    <div>
+        <button onclick="create_div() " class="m_btn">proceed to book</button>
+    </div>
+    <input type="text" name="" id="no_b">
+    <div id="arg">abcd</div>
+
+
+    <!-- <p>This is demo text.</p> -->
+    <script>
+        // var div1 = document.createElement('div')
+        // div1.innerText = "qwe "
+        // div1.setAttribute("style ", "color : red ")
+        // div1.setAttribute("wee ", "my arse ")
+
+        // div1.innerHTML = `<div style="width:100px; background-color:blue "> my name is andy </div>`
+
+        // console.log(div1)
+        // var mdiv = document.getElementById("main_div ")
+        // mdiv.appendChild(div1)
+        // document.body.appendChild(div1)
+        var x = document.getElementById("no_b")
+
+        var mdiv = document.getElementById("main_div")
+
+        function create_div() {
+            for (let y = 1; y <= x.value; y++) {
+                var slot_c = document.createElement('div')
+                slot_c.setAttribute("id", `id-${y}`)
+                slot_c.setAttribute("style", "background-color: green;; width : 50px ;height : 50px; display : inline-block; margin: 5px 5px 5px; padding: 25px 25px 0 25px;")
+                slot_c.setAttribute("onclick", `print_id("id-${y}")`)
+                slot_c.innerHTML = `id${y}`
+                mdiv.appendChild(slot_c)
+            }
+
+        }
+
+        function print_id(arg) {
+            var x = document.getElementById(arg)
+            console.log("in functin")
+            console.log("My id is :", arg)
+            if (x.style.backgroundColor == "red") {
+                x.setAttribute("style", "background-color: green; width : 50px ;height : 50px; display : inline-block; margin: 5px 5px 5px; padding: 25px 25px 0 25px;")
+            } else {
+                x.setAttribute("style", "background-color: red; width : 50px ;height : 50px; display : inline-block; margin: 5px 5px 5px; padding: 25px 25px 0 25px;")
+            }
+            console.log("My color :", x.style.backgroundColor)
+
+            // var slot = document.getElementById('slot_c')
+            // arg.setAttribute("style", "background-color : red ")
+
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+</html>
